@@ -117,11 +117,11 @@ export type EleActionPopconfirmAction = Action
 
 // 以下为临时方案，由于 Element Plus 未全局导出 Prop ，只能自建或通过引入组件方式定义组件 Prop
 // The following is a temporary solution. Since Element Plus does not export Prop globally, it can only define component Prop by itself or by introducing components
-import TableDefault from 'element-plus/lib/components/table/src/table/defaults'
-import TableColumn from 'element-plus/lib/components/table/src/table-column/defaults'
+// import TableDefault from 'element-plus/lib/components/table/src/table/defaults'
+// import TableColumn from 'element-plus/lib/components/table/src/table-column/defaults'
 
-export const EleTableProps = TableDefault
+export const EleTableProps = Object
 export type EleTable = TableProps
 
-export const EleTableColumnProps = TableColumn
+export const EleTableColumnProps = Object
 export type EleTableColumn = Partial<ExtractPropTypes<typeof TableColumn>>

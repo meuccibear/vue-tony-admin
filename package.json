@@ -7,13 +7,13 @@
     "url": "https://github.com/crlang"
   },
   "scripts": {
-    "bootstrap": "pnpm install",
+    "bootstrap": "yarn install",
     "serve": "npm run dev",
     "dev": "vite",
-    "build": "cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8192 pnpm vite build",
-    "build:site": "cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8192 pnpm vite build --mode site",
-    "build:test": "cross-env NODE_OPTIONS=--max-old-space-size=8192 pnpm vite build --mode test",
-    "build:no-cache": "pnpm clean:cache && npm run build",
+    "build": "cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8192 yarn vite build",
+    "build:site": "cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8192 yarn vite build --mode site",
+    "build:test": "cross-env NODE_OPTIONS=--max-old-space-size=8192 yarn vite build --mode test",
+    "build:no-cache": "yarn clean:cache && npm run build",
     "preview": "npm run build && vite preview",
     "type:check": "vue-tsc --noEmit --skipLibCheck",
     "test:gzip": "npx http-server dist --cors --gzip -c-1",
@@ -23,8 +23,8 @@
     "lint:stylelint": "stylelint --fix \"**/*.{vue,postcss,css,scss}\" --cache-location node_modules/.cache/stylelint/",
     "commit": "czg",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "reinstall": "rimraf pnpm-lock.yaml && rimraf package.lock.json && rimraf node_modules && npm run bootstrap",
-    "preinstall": "npx only-allow pnpm",
+    "reinstall": "rimraf yarn-lock.yaml && rimraf package.lock.json && rimraf node_modules && npm run bootstrap",
+    "preinstall": "npx only-allow yarn",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -148,9 +148,7 @@
     "url": "https://github.com/crlang/vue-tony-admin/issues"
   },
   "homepage": "https://github.com/crlang/vue-tony-admin",
-  "packageManager": "pnpm@8.5.0",
   "engines": {
-    "node": ">=16.15.1",
-    "pnpm": ">=8.1.0"
+    "node": ">=16.15.1"
   }
 }
