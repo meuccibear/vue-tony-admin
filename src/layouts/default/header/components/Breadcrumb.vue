@@ -55,17 +55,19 @@ export default defineComponent({
       const parent = getAllParentPath(menus, path)
       const filterMenus = menus.filter((item) => item.path === parent[0])
       const matched = getMatched(filterMenus, parent) as any
+      console.log('matched:', filterMenus, parent, matched)
 
       if (!matched || matched.length === 0) return
 
       const breadcrumbList = filterItem(matched)
-
+      console.log('currentRoute:', currentRoute.value)
       if (currentRoute.value.meta?.currentActiveMenu) {
         breadcrumbList.push({
           ...currentRoute.value,
           name: currentRoute.value.meta?.title || currentRoute.value.name,
         } as unknown as RouteLocationMatched)
       }
+      console.log('breadcrumbList:', breadcrumbList)
       routes.value = breadcrumbList
     })
 

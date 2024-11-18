@@ -12,6 +12,7 @@ const about: AppRouteModule = {
     icon: 'ep:connection',
     title: '关于',
     orderNo: 999,
+    hideMenu: true,
   },
   children: [
     {

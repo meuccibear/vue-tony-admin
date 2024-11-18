@@ -37,7 +37,7 @@ export function createFakeUserList() {
       desc: '致敬钢铁侠！如同Tony的机甲一般，模块组合的前端框架。',
       password: '123456',
       token: 'fakeToken1',
-      homePath: '/dashboard/analysis',
+      homePath: '/about/index',
       roles: [
         {
           roleName: 'manager',
